@@ -8,6 +8,9 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
+    z-index: 1;
+    transition: all 0.2s;
+    // outline-offset: 2rem;
 
     &--p1 {
       left: 49%;
@@ -20,6 +23,13 @@
     &--p3 {
       left: 60%;
       top: 20rem;
+    }
+
+    &:hover {
+      // outline: 1.5rem solid $color-primary;
+      transform: scale(1.1);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 2;
     }
   }
 }
