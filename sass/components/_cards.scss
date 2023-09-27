@@ -3,5 +3,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    &-card {
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      &-side {
+        background-color: aqua;
+        height: 50rem;
+        width: 30rem;
+        transition: all 0.8s;
+      }
+    }
+    &:hover &-side {
+      transform: rotateY(180deg);
+    }
   }
 }

@@ -175,6 +175,16 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  .section-tours--cards-card {
+    perspective: 150rem;
+    -moz-perspective: 150rem; }
+    .section-tours--cards-card-side {
+      background-color: aqua;
+      height: 50rem;
+      width: 30rem;
+      transition: all 0.8s; }
+  .section-tours--cards:hover .section-tours--cards-side {
+    transform: rotateY(180deg); }
 
 .composition__photo {
   width: 30%;
