@@ -1,21 +1,63 @@
-.section-tours {
-  &--cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.section-tours--cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // margin-right: 20%;
 
-    &-card {
-      perspective: 150rem;
-      -moz-perspective: 150rem;
-      &-side {
-        background-color: aqua;
-        height: 50rem;
-        width: 30rem;
-        transition: all 0.8s;
+  &-card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    margin: auto;
+
+    &-side {
+      height: 50rem;
+      width: 30rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    }
+
+    &-side--front {
+      background-color: $color-white;
+    }
+
+    &-side--back {
+      // background-color: aqua;
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-terciary-light,
+          $color-terciary-dark
+        );
       }
     }
-    &:hover &-side {
+
+    &:hover &-side--front {
       transform: rotateY(180deg);
+    }
+
+    &:hover &-side--back {
+      transform: rotateY(0);
     }
   }
 }
