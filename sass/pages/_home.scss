@@ -24,4 +24,15 @@
     ),
     url(../img/nat-4.jpg);
   background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -7rem;
+  &--skewfix {
+    transform: skewY(7deg);
+  }
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  // transform: skewY(-7deg);
+
+  // & > * {
+  // direct child}
 }
