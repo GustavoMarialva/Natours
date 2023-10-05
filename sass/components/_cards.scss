@@ -1,3 +1,5 @@
+// FUNCTIONALITY
+
 .section-tours--cards {
   display: flex;
   justify-content: space-around;
@@ -8,13 +10,14 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    margin: auto;
+    // margin: auto;
 
     &-side {
-      height: 50rem;
+      height: 52rem;
       width: 30rem;
       transition: all 0.8s ease;
       position: absolute;
+      overflow: hidden;
       top: 0;
       left: 0;
       backface-visibility: hidden;
@@ -53,11 +56,77 @@
     }
 
     &:hover &-side--front {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
     }
 
     &:hover &-side--back {
       transform: rotateY(0);
+    }
+  }
+}
+// FRONT SIDE STYLING
+.card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  &--1 {
+    background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      ),
+      url(../../img/nat-5.jpg);
+  }
+
+  &--2 {
+  }
+
+  &--3 {
+  }
+
+  &--heading {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &--heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+  }
+
+  &--details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
     }
   }
 }
