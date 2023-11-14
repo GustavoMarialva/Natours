@@ -55,6 +55,7 @@
   &__link {
     &:link,
     &:visited {
+      display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       color: $color-white;
@@ -67,12 +68,19 @@
         transparent 50%,
         $color-white 50%
       );
-      background-size: 200%;
-      transition: all 2s;
+      background-size: 230%;
+      transition: all 0.2s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
     }
     &:hover,
     &:active {
       background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
     }
   }
 }
