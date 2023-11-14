@@ -12,6 +12,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
   }
 
   &__background {
@@ -26,17 +27,22 @@
       $color-primary-dark
     );
     z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.7, 1);
+    // easings.net ajuda a ver a velocidade das transições para o cubic-bezier
+    // The cubic-bezier() function defines a Cubic Bezier curve.A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property.
 
-    transform: scale(80);
+    // transform: scale(80);
   }
 
   &__nav {
     height: 100vh;
-    width: 100%;
+    width: 0;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1500;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
@@ -82,5 +88,14 @@
       color: $color-primary;
       transform: translateX(1rem);
     }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
 }
