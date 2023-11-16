@@ -200,7 +200,10 @@ body {
 .section-tours--cards {
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  width: auto;
+  padding-right: 30rem;
+  gap: 12rem; }
   .section-tours--cards-card {
     perspective: 150rem;
     -moz-perspective: 150rem;

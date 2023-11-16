@@ -4,12 +4,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: auto;
+  padding-right: 30rem;
+  gap: 12rem;
+
   // margin-right: 20%;
 
   &-card {
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
+
     // margin: auto;
 
     &-side {
