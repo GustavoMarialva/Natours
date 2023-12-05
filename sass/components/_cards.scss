@@ -8,6 +8,16 @@
   padding-right: 30rem;
   gap: 12rem;
 
+  @include respond(tab-port) {
+    gap: 20rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    height: 100vh;
+    gap: 50rem;
+  }
+
   // margin-right: 20%;
 
   &-card {

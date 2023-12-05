@@ -4,6 +4,10 @@
   font-size: 1.4rem;
   color: $color-gray-light-1;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
@@ -17,6 +21,10 @@
   &__navbar {
     display: flex;
     justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__navigation {
@@ -53,5 +61,11 @@
     border-top: 1px solid $color-gray-light-2;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 3rem;
+      margin-top: 2rem;
+    }
   }
 }
