@@ -659,8 +659,11 @@ body {
         flex-direction: column; } }
   .footer__navigation {
     border-top: 1px solid #eee;
-    padding-top: 2rem;
+    padding: 2rem 0;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .footer__navigation {
+        border-bottom: 1px solid #eee; } }
   .footer__list {
     display: flex;
     justify-content: space-around;
@@ -681,9 +684,12 @@ body {
     display: inline-block; }
     @media (max-width: 37.5em) {
       .footer__copyright {
-        width: 100%;
+        width: 80%;
         padding: 3rem;
-        margin-top: 2rem; } }
+        margin-top: 2rem;
+        text-align: center;
+        margin-left: 7.5rem;
+        border-top: none; } }
 
 .navigation__checkbox {
   display: none; }
